@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sci_fi_platformer04_main_loop.ogg-611ad6800aae5e37b66046ea8a7ec10c.oggstr"
+
+[deps]
+
+source_file="res://sprites/gothicvania-cemetery-files/demo/assets/sounds/sci_fi_platformer04_main_loop.ogg"
+dest_files=[ "res://.import/sci_fi_platformer04_main_loop.ogg-611ad6800aae5e37b66046ea8a7ec10c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

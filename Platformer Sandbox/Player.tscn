@@ -1,46 +1,81 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://sprites/characters/tile029.png" type="Texture" id=2]
-[ext_resource path="res://sprites/characters/tile039.png" type="Texture" id=3]
-[ext_resource path="res://sprites/characters/tile023.png" type="Texture" id=4]
-[ext_resource path="res://sprites/characters/tile036.png" type="Texture" id=5]
-[ext_resource path="res://sprites/characters/tile038.png" type="Texture" id=6]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-idle/hero-idle-1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-idle/hero-idle-2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-idle/hero-idle-3.png" type="Texture" id=4]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-idle/hero-idle-4.png" type="Texture" id=5]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-jump/hero-jump-1.png" type="Texture" id=6]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-jump/hero-jump-2.png" type="Texture" id=7]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-1.png" type="Texture" id=8]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-2.png" type="Texture" id=9]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-3.png" type="Texture" id=10]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-4.png" type="Texture" id=11]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-5.png" type="Texture" id=12]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-run/hero-run-6.png" type="Texture" id=13]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-crouch/hero-crouch.png" type="Texture" id=14]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-jump/hero-jump-3.png" type="Texture" id=15]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-jump/hero-jump-4.png" type="Texture" id=16]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-hurt/hero-hurt.png" type="Texture" id=17]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-attack/hero-attack-1.png" type="Texture" id=18]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-attack/hero-attack-2.png" type="Texture" id=19]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-attack/hero-attack-3.png" type="Texture" id=20]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-attack/hero-attack-4.png" type="Texture" id=21]
+[ext_resource path="res://sprites/gothicvania-cemetery-files/PNG/Sprites/hero/hero-attack/hero-attack-5.png" type="Texture" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": false,
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
 "name": "idle",
-"speed": 0.0
+"speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
-"loop": false,
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
 "name": "jump",
-"speed": 0.0
+"speed": 7.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "run",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": false,
-"name": "fall",
+"name": "crouch",
 "speed": 0.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": false,
+"name": "hurt",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": false,
+"name": "attack",
+"speed": 60.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 7.51308, 11.1144 )
+extents = Vector2( 12.931, 23.1217 )
 
 [node name="Player" type="KinematicBody2D"]
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "run"
-frame = 2
+animation = "attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.387421, 5.01487 )
+visible = false
+position = Vector2( -0.256492, 6.94662 )
 shape = SubResource( 2 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 36.594, -2.38656 )

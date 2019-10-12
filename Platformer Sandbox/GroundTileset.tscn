@@ -8,7 +8,9 @@ extents = Vector2( 16, 15.0765 )
 [node name="GroundTileset" type="Node2D"]
 
 [node name="Ground00" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -63.0084, -5.83981 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 704, 32, 32, 32 )
@@ -23,7 +25,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground01" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -20.5706, -7.25327 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 736, 32, 32, 32 )
@@ -38,7 +42,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground02" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 24.0323, -4.73176 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 704, 64, 32, 32 )
@@ -53,7 +59,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground03" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 68.6372, -3.80969 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 736, 96, 32, 32 )
@@ -68,7 +76,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground04" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 112.666, -3.1335 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 800, 64, 32, 32 )
@@ -83,7 +93,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground05" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 153.345, -3.42548 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 832, 64, 32, 32 )
@@ -98,7 +110,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground06" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 196.375, -2.19605 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 704, 160, 32, 32 )
@@ -113,7 +127,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground07" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 236.024, -2.19605 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 736, 160, 32, 32 )
@@ -128,7 +144,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground08" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 278.747, -2.19605 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 768, 160, 32, 32 )
@@ -142,8 +160,27 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground08/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="Ground25" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 167.956, 83.3852 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 160, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground25"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground25/StaticBody2D"]
+shape = SubResource( 1 )
+
 [node name="Ground09" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -62.7278, 35.9164 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 704, 192, 32, 32 )
@@ -158,7 +195,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground10" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -8.63274, 38.0679 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 736, 192, 32, 32 )
@@ -173,7 +212,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground11" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 38.7004, 38.9899 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 768, 192, 32, 32 )
@@ -188,7 +229,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground12" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 84.1894, 37.4531 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 736, 224, 32, 32 )
@@ -203,7 +246,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground13" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 125.925, 38.7473 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 768, 224, 32, 32 )
@@ -218,7 +263,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground14" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 173.809, 40.0414 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 704, 224, 32, 32 )
@@ -233,7 +280,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground15" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 215.221, 36.8061 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 704, 256, 32, 32 )
@@ -248,7 +297,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground16" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 255.016, 38.4238 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 672, 384, 32, 32 )
@@ -263,7 +314,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground17" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 295.458, 39.7179 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 672, 416, 32, 32 )
@@ -278,7 +331,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground18" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -62.3719, 83.7187 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 704, 416, 32, 32 )
@@ -293,7 +348,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground19" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -13.8417, 82.101 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 736, 384, 32, 32 )
@@ -308,7 +365,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground20" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 26.9237, 81.7775 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 736, 416, 32, 32 )
@@ -323,7 +382,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground21" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 26.9237, 81.7775 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 736, 416, 32, 32 )
@@ -338,7 +399,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground22" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 74.1598, 81.1304 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 704, 512, 32, 32 )
@@ -353,7 +416,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground23" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 74.1598, 81.1304 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 704, 512, 32, 32 )
@@ -368,7 +433,9 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Ground24" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 117.513, 81.7775 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 672, 512, 32, 32 )
