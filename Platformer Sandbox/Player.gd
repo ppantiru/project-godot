@@ -9,6 +9,7 @@ const ATTACK = preload("res://Attack.tscn")
 
 var velocity = Vector2()
 var on_ground = false
+var jumpNo = 0
 
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):
@@ -35,16 +36,22 @@ func _physics_process(delta):
 		velocity.x = 0
 		if on_ground == true:
 			$AnimatedSprite.play("idle")
-		
-	if Input.is_action_pressed("ui_up"):
-		if on_ground == true:
+	
+	if Input.is_action_just_pressed("ui_up"):
+		if on_ground == true or jumpNo < 1:
+			print(jumpNo)
 			velocity.y = JUMP_POWER
+			jumpNo += 1
 			on_ground = false
 	
+	if Input.is_action_pressed("ui_focus_next"):
+		velocity.y = -JUMP_POWER/10
+			
 	velocity.y += GRAVITY
 	
 	if is_on_floor():
 		on_ground = true
+		jumpNo = 0
 	else:
 		on_ground = false
 		if velocity.y < 0:
